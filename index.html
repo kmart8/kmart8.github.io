@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kevin Martin</title>
+
+  <!-- particles.js stuff -->
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/9f9ff938d6.js" crossorigin="anonymous"></script>
+  <!-- bootstrap styling -->
+  <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="stylesheet" href="Particles/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="fixed-nav">
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/kevin-martin-14a602116/" target="_blank" rel="noopener"
+          aria-label="Visit Kevin's Linkedin">
+          <i class="fab fa-linkedin fa-icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/kmart8" target="_blank" rel="noopener" aria-label="Visit Kevin's Github page">
+          <i class="fab fa-github fa-icon"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:kevinjskk19@gmail.com" target="_blank" rel="noopener" aria-label="Email Harsh">
+          <i class="fas fa-envelope fa-icon"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-default navbar-dark fixed-top" id="navbar-theme">
+    <a class="navbar-brand" href="index.html">kevinmart.in</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#about-me">About Me</a>
+        <a class="nav-item nav-link" href="#experience">Experience</a>
+        <a class="nav-item nav-link" href="#projects">Projects</a>
+      </div>
+    </div>
+  </nav>
+  <div id="particles-js">
+    <div class="cover-text">
+      <h1>Kevin Martin</h1>
+      <p class="lead">I am passionate about solving impactful problems in the <span class="highlight-text">Data
+          Science and Software Engineering domains</p>
+    </div>
+  </div>
+  <div class="section" id="about-me">
+    <div class="content about-section-content">
+      <div class="about-text">
+        <h1 class="section-header">About Me</h1>
+        <p class="lead">
+          Over the course of completing my undergraduate degree, engineering internships
+          and working a full time engineering job for Amazon Robotics, I
+          have developed a set of problem solving skills and world perspective that
+          I hope to continue to grow with each opportunity I pursue. <br><br>
+          I am currently completing a Master's Degree in Data Science from WPI
+          while working for The Hanover Insurance Group on projects ranging from Data Science modelling to
+          building out web applications. <br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section">
+    <div class=" content project-section-content">
+      <div class="project-header">
+        <div class="header-text">
+          <h1 class="section-header">Experience & Projects</h1>
+        </div>
+
+        <!--<label class="switch">
+                <input type="checkbox" checked onclick="project_switch()">
+                <div class="slider round">
+                    <span class="sd project-options">Software Development</span>
+                    <span class="ds project-options">Data Science</span>
+                </div>
+            </label>-->
+        <div class="project-btns">
+          <button class="ds project-options active">Experience</button>
+          <button class="sd project-options inactive">Projects</button>
+        </div>
+
+
+      </div>
+
+      <div class="project-carousel">
+        <div id="ds-projects-div" class="project-row">
+          <div class="project-tile ds-projects"
+            onclick="window.open('https://hr23232323.github.io/love-at-first-swipe/', '_blank');">
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/love_swipe.JPG" alt="screenshot from data science project website"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>The Hanover Insurance Group</h1>
+                <p>Lorem</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">Python</div>
+                <div class="tag">Numpy</div>
+                <div class="tag">Scikit-Learn</div>
+                <div class="tag">Pandas</div>
+                <div class="tag">Matplotlib</div>
+                <div class="tag">Javascript</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile ds-projects"
+            onclick="window.open('https://github.com/hr23232323/j_stroke', '_blank');">
+
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/j_stroke.JPG" alt="screenshot from J-stroke website"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>Amazon Robotics</h1>
+                <p>Lorem</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">Python</div>
+                <div class="tag">Data Visualization</div>
+                <div class="tag">Web Scraping</div>
+                <div class="tag">D3.js</div>
+                <div class="tag">Dashboard</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile ds-projects"
+            onclick="window.open('https://github.com/hr23232323/fed_budget_remix', '_blank');">
+
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/fed_budget.JPG" alt="screenshot from budget redesigned project website"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>DS Project3</h1>
+                <p>Lorem
+                </p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">Python</div>
+                <div class="tag">Data Visualization</div>
+                <div class="tag">Data Wrangling</div>
+                <div class="tag">D3.js</div>
+                <div class="tag">Analytics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sd-projects-div" class="project-row">
+
+          <div class="project-tile sd-projects" onclick="window.open('https://projectcentersmap.wpi.edu/', '_blank');">
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/wpi_global_map.JPG" alt="WPI Global Project Map photo"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>SD Project1</h1>
+                <p>Lorem</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">JavaScript</div>
+                <div class="tag">PHP</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile sd-projects" onclick="window.open('https://wpi-exp.netlify.com/', '_blank');">
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/human_exp.JPG" -->
+                <!-- alt="Screenshot from human-computer interaction experiment website"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>SD Project2</h1>
+                <p>Lorem</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">JavaScript</div>
+                <div class="tag">Python</div>
+                <div class="tag">R</div>
+                <div class="tag">D3.js</div>
+                <div class="tag">Statistics</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile sd-projects"
+            onclick="window.open('https://github.com/hr23232323/WorkoutBuddy', '_blank');">
+
+            <div class="project-image">
+              <div class="project-image-content">
+                <!-- <img src="img/projects/workout_buddy.JPG" alt="screenshot from workout buddy website"> -->
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>SD Project3</h1>
+                <p>Lorem</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">JavaScript</div>
+                <div class="tag">NodeJS</div>
+                <div class="tag">SQLite</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="Particles/particles.js-master/particles.js"></script>
+    <script src="Particles/particles.js-master/demo/js/app.js"></script>
+    <script src="Particles/particles.js-master/demo/js/flickity.pkgd.min.js"></script>
+    <script src="/scripts_main.js"></script>
+
+</body>
+
+</html>
