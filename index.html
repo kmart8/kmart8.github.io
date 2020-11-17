@@ -14,6 +14,7 @@
   <script src="https://kit.fontawesome.com/9f9ff938d6.js" crossorigin="anonymous"></script>
   <!-- bootstrap styling -->
   <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="stylesheet" href="slides/styles.css">
   <link rel="stylesheet" href="Particles/bootstrap/css/bootstrap.min.css">
 </head>
 
@@ -40,7 +41,7 @@
   </div>
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-default navbar-dark fixed-top" id="navbar-theme">
-    <a class="navbar-brand" href="index.html">kevinmart.in</a>
+    <a class="navbar-brand" href="index.html">Kevin Martin</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -48,10 +49,10 @@
 
     <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#about-me">About Me</a>
-        <a class="nav-item nav-link" href="#experience">Experience</a>
-        <a class="nav-item nav-link" href="#projects">Projects</a>
+        <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#about-me">About Me <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#experience">Experience<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#projects">Projects<span class="sr-only">(current)</span></a>
       </div>
     </div>
   </nav>
@@ -73,52 +74,138 @@
           I hope to continue to grow with each opportunity I pursue. <br><br>
           I am currently completing a Master's Degree in Data Science from WPI
           while working for The Hanover Insurance Group on projects ranging from Data Science modelling to
-          building out web applications. <br><br>
+          building out web applications.
       </div>
     </div>
   </div>
 
+  <div class="slideshow-container" id="experience">
 
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fader">
+      <div class="jobtext">Data Scientist</div>
+      <div class="titletext">The Hanover Insurance Group</div>
+      <div class="datetext">Jan 2020 - Present</div>
+      <div class="bodytext">
+        <ul>
+          <li>Developed a system in Python through a Linux based server which identifies anomalous behavior in
+            insurance claims data, increasing efficiency through eliminating the manual claims inspection
+            process
+          </li>
+          <li>Implementing a variety of statistical and machine learning techniques, including gradient
+            boosting machines and LSTM neural nets to help identify anomalies in the dataset and determine
+            which
+            factors are causing these behaviors
+          </li>
+          <li>Proved that the system was able to identify anomalies in historical data, and also able to find
+            the cause of an anomaly in a currently developing issue
+          </li>
+          <li>Used Python Flask to turn the system into a web application that fully integrates with the company
+            infrastructure
+          </li>
+          <li>Developing web application hosted on company servers using Angular and NodeJS to optimize
+            actuarial analysis by 90%
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="section">
+    <div class="mySlides fader">
+      <div class="jobtext">Deployment Engineer</div>
+      <div class="titletext">Amazon Robotics</div>
+      <div class="datetext">June 2018 - December 2019</div>
+      <div class="bodytext">
+        <ul>
+          <li>Coordinated between Amazon Robotics’ (AR) Engineering, Software, Supply Chain, & Infrastructure
+            teams to
+            develop, scale, and strategically deploy AR’s newest automated logistics facilities. Worked with
+            Amazon
+            Analytics teams and AR senior management to improve BI and project management tools
+          </li>
+          <li>Oversaw the deployment of AR’s latest Las Vegas (LAS7) and Oklahoma City (OKC1) facilities with
+            a
+            team
+            of four,
+            testing new technology revisions and deploying over 1 million combined sqft of robotics floors
+            with
+            a
+            hardware/installation budget of $60 million
+          </li>
+          <li>Worked on a team of three to optimize quantities of product being built & shipped to other
+            Amazon
+            facilities
+            while developing a suite of BI tools to monitor supply chain productivity
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mySlides fader">
+      <div class="jobtext">Systems Engineer</div>
+      <div class="titletext">MIT Lincoln Laboratory</div>
+      <div class="datetext">May 2017 - October 2017</div>
+      <div class="bodytext">
+        <ul>
+          <li>Designed, manufactured, and tested a 3-axis hydrogen peroxide monopropellant propulsion system
+            capable of providing attitude control thrust and maneuvering thrust
+          </li>
+          <li>Tested final design utilizing a vacuum chamber equipped with several types of sensors and a
+            LabVIEW virtual instrument for data collection
+          </li>
+          <li>Utilized R programming to implement multilinear regression techniques and determine the most
+            influential predictors on thrust output to redesign and improve performance
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Next and previous buttons -->
+  <div class="nextprevbuttons">
+    <a class="prev" href="#aboutme" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" href="#aboutme" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br><br><br>
+  <div class="section" id="projects">
     <div class=" content project-section-content">
       <div class="project-header">
         <div class="header-text">
-          <h1 class="section-header">Experience & Projects</h1>
+          <h1 class="section-header">Some Things I've Done</h1>
         </div>
 
-        <!--<label class="switch">
-                <input type="checkbox" checked onclick="project_switch()">
-                <div class="slider round">
-                    <span class="sd project-options">Software Development</span>
-                    <span class="ds project-options">Data Science</span>
-                </div>
-            </label>-->
         <div class="project-btns">
-          <button class="ds project-options active">Experience</button>
-          <button class="sd project-options inactive">Projects</button>
+          <button class="ds project-options active">Data Science Projects</button>
+          <button class="sd project-options inactive">Software Engineering</button>
         </div>
-
 
       </div>
-
       <div class="project-carousel">
         <div id="ds-projects-div" class="project-row">
-          <div class="project-tile ds-projects" onclick="window.open('https://www.google.com/', '_blank');">
+          <div class="project-tile ds-projects">
             <div class="project-image">
               <div class="project-image-content">
-                <!-- <img src="img/projects/love_swipe.JPG" alt="screenshot from data science project website"> -->
+
               </div>
             </div>
             <div class="project-text">
               <div class="project-text-content">
-                <h1>The Hanover Insurance Group</h1>
-                <p>Lorem</p>
+                <h1>Anomaly Detection System</h1>
+                <p>A machine learning system that identifies anomalous behavior in
+                  claims data.
+                </p>
               </div>
             </div>
             <div class="project-tags">
               <div class="project-tags-content">
                 <div class="tag">Python</div>
+                <div class="tag">Flask</div>
                 <div class="tag">Numpy</div>
                 <div class="tag">Scikit-Learn</div>
                 <div class="tag">Pandas</div>
@@ -127,50 +214,49 @@
               </div>
             </div>
           </div>
-          <div class="project-tile ds-projects" onclick="window.open('https://www.google.com/', '_blank');">
+          <div class="project-tile ds-projects">
 
             <div class="project-image">
               <div class="project-image-content">
-                <!-- <img src="img/projects/j_stroke.JPG" alt="screenshot from J-stroke website"> -->
+
               </div>
             </div>
             <div class="project-text">
               <div class="project-text-content">
-                <h1>Amazon Robotics</h1>
-                <p>Lorem</p>
+                <h1>Business Intellgence Dashboard</h1>
+                <p>A system developed in Tableau to help visualize insurance data better.</p>
               </div>
             </div>
             <div class="project-tags">
               <div class="project-tags-content">
-                <div class="tag">Python</div>
+                <div class="tag">Tableau</div>
                 <div class="tag">Data Visualization</div>
-                <div class="tag">Web Scraping</div>
-                <div class="tag">D3.js</div>
                 <div class="tag">Dashboard</div>
               </div>
             </div>
           </div>
-          <div class="project-tile ds-projects" onclick="window.open('https://www.google.com/', '_blank');">
+          <div class="project-tile ds-projects">
 
             <div class="project-image">
               <div class="project-image-content">
-                <!-- <img src="img/projects/fed_budget.JPG" alt="screenshot from budget redesigned project website"> -->
+                <img src="data/MNIST.gif"></gif>
+
               </div>
             </div>
             <div class="project-text">
               <div class="project-text-content">
-                <h1>DS Project3</h1>
-                <p>Lorem
+                <h1>Image Classifier with Neural Networks</h1>
+                <p>Built and trained an image classifier on the MNIST dataset.
                 </p>
               </div>
             </div>
             <div class="project-tags">
               <div class="project-tags-content">
                 <div class="tag">Python</div>
-                <div class="tag">Data Visualization</div>
-                <div class="tag">Data Wrangling</div>
-                <div class="tag">D3.js</div>
-                <div class="tag">Analytics</div>
+                <div class="tag">PyTorch</div>
+                <div class="tag">Pandas</div>
+                <div class="tag">Seaborn</div>
+                <div class="tag">Keras</div>
               </div>
             </div>
           </div>
@@ -178,16 +264,38 @@
 
         <div id="sd-projects-div" class="project-row">
 
-          <div class="project-tile sd-projects" onclick="window.open('https://www.google.com/', '_blank');">
+          <div class="project-tile sd-projects"
+            onclick="window.open('https://github.com/kmart8/FrequentFliers', '_blank');">
             <div class="project-image">
               <div class="project-image-content">
-                <!-- <img src="img/projects/wpi_global_map.JPG" alt="WPI Global Project Map photo"> -->
+
               </div>
             </div>
             <div class="project-text">
               <div class="project-text-content">
-                <h1>SD Project1</h1>
-                <p>Lorem</p>
+                <h1>Flight Reservation System</h1>
+                <p>A flight reservation system app built in Java.</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <div class="project-tags-content">
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">Java</div>
+                <div class="tag">Kotlin</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tile sd-projects" onclick="window.open('https://github.com/AJWurts/autodb', '_blank');">
+            <div class="project-image">
+              <div class="project-image-content">
+
+              </div>
+            </div>
+            <div class="project-text">
+              <div class="project-text-content">
+                <h1>AutoDB</h1>
+                <p>Developed a site that allows users to build, host and manage database schemas.</p>
               </div>
             </div>
             <div class="project-tags">
@@ -195,46 +303,22 @@
                 <div class="tag">HTML</div>
                 <div class="tag">CSS</div>
                 <div class="tag">JavaScript</div>
-                <div class="tag">PHP</div>
+                <div class="tag">Go</div>
+                <div class="tag">MySQL</div>
               </div>
             </div>
           </div>
-          <div class="project-tile sd-projects" onclick="window.open('https://www.google.com/', '_blank');">
-            <div class="project-image">
-              <div class="project-image-content">
-                <!-- <img src="img/projects/human_exp.JPG" -->
-                <!-- alt="Screenshot from human-computer interaction experiment website"> -->
-              </div>
-            </div>
-            <div class="project-text">
-              <div class="project-text-content">
-                <h1>SD Project2</h1>
-                <p>Lorem</p>
-              </div>
-            </div>
-            <div class="project-tags">
-              <div class="project-tags-content">
-                <div class="tag">HTML</div>
-                <div class="tag">CSS</div>
-                <div class="tag">JavaScript</div>
-                <div class="tag">Python</div>
-                <div class="tag">R</div>
-                <div class="tag">D3.js</div>
-                <div class="tag">Statistics</div>
-              </div>
-            </div>
-          </div>
-          <div class="project-tile sd-projects" onclick="window.open('https://www.google.com', '_blank');">
+          <div class="project-tile sd-projects">
 
             <div class="project-image">
               <div class="project-image-content">
-                <!-- <img src="img/projects/workout_buddy.JPG" alt="screenshot from workout buddy website"> -->
+
               </div>
             </div>
             <div class="project-text">
               <div class="project-text-content">
-                <h1>SD Project3</h1>
-                <p>Lorem</p>
+                <h1>This Site</h1>
+                <p>My personal website.</p>
               </div>
             </div>
             <div class="project-tags">
@@ -242,8 +326,6 @@
                 <div class="tag">HTML</div>
                 <div class="tag">CSS</div>
                 <div class="tag">JavaScript</div>
-                <div class="tag">NodeJS</div>
-                <div class="tag">SQLite</div>
               </div>
             </div>
           </div>
@@ -258,7 +340,7 @@
     <script src="Particles/particles.js-master/particles.js"></script>
     <script src="Particles/particles.js-master/demo/js/app.js"></script>
     <script src="Particles/particles.js-master/demo/js/flickity.pkgd.min.js"></script>
-    <script src="/scripts_main.js"></script>
+    <script src="/app.js"></script>
 
 </body>
 
