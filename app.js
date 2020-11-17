@@ -117,71 +117,6 @@ function sd_btn_click_mob() {
     }
 }
 
-/*function project_switch() {
-    var w = window.innerWidth;
-    var spans = document.getElementsByClassName("project-options");
-    console.log(spans)
-
-    var i;
-    for (i = 0; i < spans.length; i++) {
-        var name = spans[i].classList[0];
-        var display = window.getComputedStyle(spans[i]).getPropertyValue('display');
-        console.log(name)
-        console.log(display)
-
-        //console.log(name, display);
-        if (w > 800) {
-            if (name == "sd" && display == "block") {
-                sd_btn_click();
-            } else if (name == "ds" && display == "block") {
-                ds_btn_click();
-            }
-
-        } else {
-            if (name == "sd" && display == "block") {
-                sd_btn_click_mob();
-            } else if (name == "ds" && display == "block") {
-                ds_btn_click_mob();
-            }
-        }
-    }
-}*/
-
-/*function project_switch() {
-    var w = window.innerWidth;
-    var btns = document.getElementsByClassName("project-options");
-
-    var i;
-    console.log(this)
-    for (i = 0; i < btns.length; i++) {
-        //btns[i].classList.toggle("active");
-        var name = btns[i].classList[0];
-        var display = btns[i].classList[2];
-        //var display = window.getComputedStyle(btns[i]).getPropertyValue('display');
-        console.log(name)
-        console.log(display)
-
-        //console.log(name, display);
-        if (w > 800) {
-            if (name == "sd" && display == "active") {
-                ds_btn_click();
-            } else if (name == "ds" && display == "active") {
-                sd_btn_click();
-            }
-
-        } else {
-            if (name == "sd" && display == "active") {
-                sd_btn_click_mob();
-            } else if (name == "ds" && display == "active") {
-                ds_btn_click_mob();
-            }
-        }
-    }
-    switch_active(btns)
-}*/
-
-
-
 var btns = document.getElementsByClassName("project-options")
 for (var btn of btns) {
     btn.addEventListener("click", function (event) {
@@ -268,23 +203,52 @@ for (var link of exp_links) {
     });
 }
 
-var flkty = new Flickity('.main-gallery', {
-    // options
-    cellAlign: 'left',
-    contain: true
-});
+// var flkty = new Flickity('.main-gallery', {
+//     // options
+//     cellAlign: 'left',
+//     contain: true
+// });
 
 var landing_div = document.getElementsByClassName("landing-page")[0]
 var icon_list = document.getElementsByClassName("fa-icon")
 
-document.addEventListener("scroll", function () {
-    var landing_btm = landing_div.getBoundingClientRect().bottom
-    for (var icon of icon_list) {
-        icon_btm = icon.getBoundingClientRect().bottom
-        if (landing_btm < icon_btm) {
-            icon.style.color = "var(--text-primary)"
-        } else {
-            icon.style.color = "var(--bg-primary)"
-        }
+// document.addEventListener("scroll", function () {
+//     var landing_btm = landing_div.getBoundingClientRect().bottom
+//     for (var icon of icon_list) {
+//         icon_btm = icon.getBoundingClientRect().bottom
+//         if (landing_btm < icon_btm) {
+//             icon.style.color = "var(--text-primary)"
+//         } else {
+//             icon.style.color = "var(--bg-primary)"
+//         }
+//     }
+// })
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-})
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
