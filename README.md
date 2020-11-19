@@ -1,2 +1,2 @@
 # MyWebsite
-go to https://kmart8.github.io/MyWebsite/index.html to see the site
+go to https://kmart8.github.io/ to see the site
