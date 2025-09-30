@@ -1,0 +1,40 @@
+import Link from 'next/link';
+import { getAllPosts } from '@/data/blog';
+import BlogPostCard from '@/components/BlogPostCard';
+
+export default function BlogPage() {
+  const allPosts = getAllPosts();
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-gray-100">
+      <div className="max-w-2xl mx-auto px-6 py-16">
+        {/* Header */}
+        <div className="mb-12">
+          <Link 
+            href="/" 
+            className="text-gray-400 hover:text-white transition-colors text-sm mb-4 inline-block"
+          >
+            ← Back to home
+          </Link>
+          <h1 className="text-3xl font-bold text-white mb-4">Blog</h1>
+          <p className="text-gray-300">
+            Thoughts on technology, productivity, and building things that matter.
+          </p>
+        </div>
+
+        {/* Blog Posts */}
+        <div className="space-y-8">
+          {allPosts.map((post) => (
+            <BlogPostCard key={post.id} post={post} />
+          ))}
+        </div>
+
+        {allPosts.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-400">No blog posts yet. Check back soon!</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
