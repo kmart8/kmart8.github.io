@@ -21,7 +21,7 @@ export async function sendEmail({ to, subject, html, from }: EmailOptions) {
 
   try {
     const result = await resend.emails.send({
-      from: from || 'Kevin Martin <onboarding@resend.dev>', // Use resend.dev for testing, replace with your verified domain for production
+      from: from || 'Kevin Martin <kevin@k3vinmartin.com>', // Use resend.dev for testing, replace with your verified domain for production
       to,
       subject,
       html,
