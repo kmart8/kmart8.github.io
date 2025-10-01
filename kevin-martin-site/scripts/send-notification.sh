@@ -35,8 +35,8 @@ response=$(curl -s -w "\n%{http_code}" -X POST "$SITE_URL/api/send-notification"
   -H "Authorization: Bearer $NOTIFICATION_API_SECRET" \
   -d "{\"postSlug\": \"$POST_SLUG\"}")
 
-http_code=$(echo "$response" | tail -n1)
-body=$(echo "$response" | head -n-1)
+http_code=$(echo "$response" | tail -n 1)
+body=$(echo "$response" | sed '$d')
 
 if [ "$http_code" -eq 200 ]; then
   echo "✓ Success!"

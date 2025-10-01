@@ -19,7 +19,7 @@ export async function GET(request: Request) {
         </html>
         `,
         {
-          headers: { 'Content-Type': 'text/html' },
+          headers: { 'Content-Type': 'text/html; charset=utf-8' },
           status: 400,
         }
       );
@@ -47,7 +47,7 @@ export async function GET(request: Request) {
         </html>
         `,
         {
-          headers: { 'Content-Type': 'text/html' },
+          headers: { 'Content-Type': 'text/html; charset=utf-8' },
           status: 404,
         }
       );
@@ -67,7 +67,7 @@ export async function GET(request: Request) {
         </html>
         `,
         {
-          headers: { 'Content-Type': 'text/html' },
+          headers: { 'Content-Type': 'text/html; charset=utf-8' },
           status: 403,
         }
       );
@@ -90,6 +90,7 @@ export async function GET(request: Request) {
       <!DOCTYPE html>
       <html>
         <head>
+          <meta charset="utf-8">
           <title>Successfully Unsubscribed</title>
           <style>
             body {
@@ -121,7 +122,7 @@ export async function GET(request: Request) {
       </html>
       `,
       {
-        headers: { 'Content-Type': 'text/html' },
+        headers: { 'Content-Type': 'text/html; charset=utf-8' },
       }
     );
   } catch (error) {
@@ -137,10 +138,10 @@ export async function GET(request: Request) {
         </body>
       </html>
       `,
-      {
-        headers: { 'Content-Type': 'text/html' },
-        status: 500,
-      }
+        {
+          headers: { 'Content-Type': 'text/html; charset=utf-8' },
+          status: 500,
+        }
     );
   }
 }
