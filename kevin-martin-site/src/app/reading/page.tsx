@@ -4,8 +4,8 @@ import { readingData } from '@/data/reading';
 export default function Reading() {
   return (
     <ReadingPage
-      title="Reading/read"
-      subtitle="I'd love to hear your recommendations."
+      title="books i've read"
+      subtitle="let me hear recommendations"
       years={readingData}
     />
   );
