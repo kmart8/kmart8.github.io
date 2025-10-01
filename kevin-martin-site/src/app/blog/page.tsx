@@ -19,7 +19,7 @@ export default function BlogPage() {
           </Link>
           <h1 className="text-3xl font-bold text-white mb-4">Blog</h1>
           <p className="text-gray-300">
-            Thoughts on technology, productivity, and building things that matter.
+            a place for my thoughts
           </p>
         </div>
 

@@ -42,7 +42,7 @@ and run 3x per week, and plan to continue that for the foreseeable future.  I am
 This makes it easy to track my progress in these areas and see how I'm doing.  Perhaps I'll write another blog post about how I use it in detail.
 
 ### Learning 
-Measuring time spent studying or books read - I need to make more progress here.  I've included a [reading](/reading) section of this site to help me track my progress for books read, but still figuring 
+Measuring time spent studying or books read - I need to make more progress here.  I've included a [books](/books) section of this site to help me track my progress for books read, but still figuring 
 out a good way to measure time spent studying.  One thing I do to help myself read more is always listen to audiobooks on the commute to work.
 
 ### Habits 
@@ -61,7 +61,7 @@ There's an important caveat: not everything that can be measured should be measu
 
 There is an interesting phenomenon called [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law), which I find to be true in many cases.  I see it happen all the time, both
 in the professional world and in personal life.  In my own life, there have been times where I've gotten so caught up in the numbers that I've lost sight of the actual goal.
-This is a reminder that we should be careful about the metrics we choose to track, and not get too caught up in the numbers.  I'll have to keep this in mind as I develop my measurement system(s).
+This is a reminder that we should be careful about the metrics we choose to track.  I'll have to keep this in mind as I develop my measurement system(s).
 
 ## Getting Started
 

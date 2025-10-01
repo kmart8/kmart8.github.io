@@ -25,16 +25,11 @@ export default function Home() {
 
         {/* Notes */}
         <section className="mb-12">
-          <h2 className="text-lg font-semibold text-white mb-4">Notes</h2>
+          <h2 className="text-lg font-semibold text-white mb-4">Etc.</h2>
           <div className="space-y-3">
             <div>
-              <a href="/reading" className="text-gray-300 hover:text-white">
-                reading
-              </a>
-            </div>
-            <div>
-              <a href="#" className="text-gray-300 hover:text-white">
-                boston [soon]
+              <a href="/books" className="text-gray-300 hover:text-white">
+                books
               </a>
             </div>
           </div>

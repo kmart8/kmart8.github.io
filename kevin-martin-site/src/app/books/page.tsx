@@ -1,12 +1,13 @@
 import ReadingPage from '@/components/ReadingPage';
-import { readingData } from '@/data/reading';
+import { readingData } from '@/data/books';
 
-export default function Reading() {
+export default function Books() {
   return (
     <ReadingPage
       title="books i've read"
-      subtitle="let me hear recommendations"
+      subtitle="feel free to recommend some"
       years={readingData}
     />
   );
 }
+

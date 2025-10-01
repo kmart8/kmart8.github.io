@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ReadingYear } from '@/data/reading';
+import { ReadingYear } from '@/data/books';
 
 interface ReadingPageProps {
   title: string;
@@ -9,43 +9,39 @@ interface ReadingPageProps {
 
 export default function ReadingPage({ title, subtitle, years }: ReadingPageProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      <div className="max-w-2xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-slate-900 text-slate-100">
+      <div className="max-w-3xl mx-auto px-6 py-20">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-2xl font-semibold text-white mb-2">{title}</h1>
-          <Link href="/" className="text-gray-400 hover:text-white">
+        <div className="mb-12">
+          <Link href="/" className="text-slate-400 hover:text-slate-200 mb-6 inline-block">
             ← home
           </Link>
+          <h1 className="text-3xl font-bold text-white mb-3">{title}</h1>
+          {subtitle && (
+            <p className="text-slate-300 text-lg">
+              {subtitle}
+            </p>
+          )}
         </div>
 
-        {subtitle && (
-          <p className="text-gray-300 mb-12">
-            {subtitle}
-          </p>
-        )}
-
         {/* Years */}
-        {years.map((yearData) => (
-          <section key={yearData.year} className="mb-12">
-            <h2 className="text-xl font-semibold text-white mb-6">{yearData.year}</h2>
-            
-            <div className="space-y-1">
-              {yearData.books.map((book, bookIndex) => (
-                <div key={bookIndex} className="text-gray-400">
-                  {book.starred && "★"}
-                  {book.title}
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-
-        {/* Footer */}
-        <div className="mt-12">
-          <Link href="/" className="text-gray-400 hover:text-white">
-            ← home
-          </Link>
+        <div className="space-y-16">
+          {years.map((yearData) => (
+            <section key={yearData.year} className="pl-6">
+              <h2 className="text-2xl font-bold text-white mb-6">{yearData.year}</h2>
+              
+              <div className="space-y-3">
+                {yearData.books.map((book, bookIndex) => (
+                  <div key={bookIndex} className="flex items-center text-slate-300">
+                    {book.starred && (
+                      <span className="text-amber-400 mr-2">★</span>
+                    )}
+                    <span className="flex-1">{book.title}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
       </div>
     </div>
