@@ -39,49 +39,30 @@ export default function SubscriptionForm() {
   };
 
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-      <h3 className="text-xl font-semibold text-white mb-2">
-        Subscribe to new posts
-      </h3>
-      <p className="text-gray-400 text-sm mb-4">
-        Get notified when I publish new blog posts.
-      </p>
-
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <div>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            required
-            disabled={status === 'loading'}
-            className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
-          />
-        </div>
-
+    <div className="flex items-center gap-2">
+      <form onSubmit={handleSubmit} className="flex items-center gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your@email.com"
+          required
+          disabled={status === 'loading'}
+          className="px-3 py-1 bg-gray-800 border border-gray-700 rounded text-white text-sm placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50"
+        />
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 bg-[#60a5fa] hover:bg-[#3b82f6] text-white text-sm rounded transition-colors disabled:opacity-50"
         >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          {status === 'loading' ? '...' : 'subscribe'}
         </button>
-
-        {message && (
-          <p
-            className={`text-sm ${
-              status === 'success' ? 'text-green-400' : 'text-red-400'
-            }`}
-          >
-            {message}
-          </p>
-        )}
       </form>
-
-      <p className="text-xs text-gray-500 mt-3">
-        No spam, unsubscribe at any time.
-      </p>
+      {message && (
+        <span className={`text-xs ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+          {message}
+        </span>
+      )}
     </div>
   );
 }
