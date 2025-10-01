@@ -2,6 +2,5 @@
 - update unsubscribe page (basic rn)
 - add welcome email
 - add double opt-in (email verification)
-- add site logo
 - refactor project directory (make ./ the delpoy target)
 - put blogs into a supabase table, as opposed to storing in source code
