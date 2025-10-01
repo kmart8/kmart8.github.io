@@ -4,3 +4,4 @@
 - add double opt-in (email verification)
 - refactor project directory (make ./ the delpoy target)
 - put blogs into a supabase table, as opposed to storing in source code
+  - maybe a blog editor just for me?

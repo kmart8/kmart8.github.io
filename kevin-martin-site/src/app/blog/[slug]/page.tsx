@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             href="/blog" 
             className="text-gray-400 hover:text-white text-sm"
           >
-            ← Back to blog
+            ← blog
           </Link>
         </div>
 

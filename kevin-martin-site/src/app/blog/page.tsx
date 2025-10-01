@@ -15,7 +15,7 @@ export default function BlogPage() {
             href="/" 
             className="text-gray-400 hover:text-white text-sm mb-4 inline-block"
           >
-            ← Back to home
+            ← home
           </Link>
           <h1 className="text-3xl font-bold text-white mb-4">Blog</h1>
           <p className="text-gray-300">
