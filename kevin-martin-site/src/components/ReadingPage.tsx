@@ -27,7 +27,7 @@ export default function ReadingPage({ title, subtitle, years }: ReadingPageProps
         {/* Years */}
         <div className="space-y-16">
           {years.map((yearData) => (
-            <section key={yearData.year} className="pl-6">
+            <section key={yearData.year}>
               <h2 className="text-2xl font-bold text-white mb-6">{yearData.year}</h2>
               
               <div className="space-y-3">
