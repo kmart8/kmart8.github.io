@@ -1,4 +1,7 @@
 - vercel tags
 - update email template (basic rn)
+- update unsubscribe page (basic rn)
 - add welcome email
 - add double opt-in (email verification)
+- add site logo
+- refactor project directory (make ./ the delpoy target)
