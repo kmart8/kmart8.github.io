@@ -13,7 +13,7 @@ export default function Home() {
               href="https://www.capitalone.com/tech/blog/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline"
+              className="text-blue-400 hover:text-blue-300"
             >
               @capital one
             </a> | fitness enthusiast | skier | builder
@@ -28,12 +28,12 @@ export default function Home() {
           <h2 className="text-lg font-semibold text-white mb-4">Notes</h2>
           <div className="space-y-3">
             <div>
-              <a href="/reading" className="text-gray-300 hover:text-white hover:underline">
+              <a href="/reading" className="text-gray-300 hover:text-white">
                 reading
               </a>
             </div>
             <div>
-              <a href="#" className="text-gray-300 hover:text-white hover:underline">
+              <a href="#" className="text-gray-300 hover:text-white">
                 boston [soon]
               </a>
             </div>
