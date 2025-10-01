@@ -11,7 +11,7 @@ export default function BlogSection() {
         <h2 className="text-lg font-semibold text-white">Blog</h2>
         <Link 
           href="/blog" 
-          className="text-sm text-gray-400 hover:text-white transition-colors"
+          className="text-sm text-gray-400 hover:text-white"
         >
           View all →
         </Link>

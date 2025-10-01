@@ -21,7 +21,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
         li: ({children}) => <li className="mb-1">{children}</li>,
         strong: ({children}) => <strong className="font-semibold text-white">{children}</strong>,
         em: ({children}) => <em className="italic text-gray-400">{children}</em>,
-        a: ({href, children}) => <a href={href} className="text-blue-400 hover:text-blue-300 underline transition-colors" target={href?.startsWith('http') ? '_blank' : undefined} rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}>{children}</a>,
+        a: ({href, children}) => <a href={href} className="text-blue-400 hover:text-blue-300" target={href?.startsWith('http') ? '_blank' : undefined} rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}>{children}</a>,
       }}
     >
       {content}

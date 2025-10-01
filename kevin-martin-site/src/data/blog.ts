@@ -12,9 +12,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "what-gets-measured-gets-fixed",
-    title: "What Gets Measured Gets Fixed",
+    title: "what gets measured gets fixed",
     slug: "what-gets-measured-gets-fixed",
-    excerpt: "Exploring the power of measurement and metrics in driving improvement and accountability.",
+    excerpt: "exploring the power of measurement and metrics in driving improvement and accountability.",
     content: `
 Creating a personal site can have many different purposes (it certainly does for me), of my goals is to help measure my progress and hold myself accountable to my own goals.
 Having a centralized and public place to share whatever is on my mind enables me to reflect on my progress and make adjustments as needed.

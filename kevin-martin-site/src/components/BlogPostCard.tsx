@@ -8,27 +8,23 @@ interface BlogPostCardProps {
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear().toString().slice(-2);
+    return `${month}.${day}.${year}`;
   };
 
   return (
-    <article className="group">
-      <Link href={`/blog/${post.slug}`} className="block">
-        <h3 className="text-lg font-medium text-white group-hover:text-blue-400 transition-colors mb-2">
+    <article className="flex items-start justify-between">
+      <div className="flex-1">
+        <Link href={`/blog/${post.slug}`} className="text-lg font-medium">
           {post.title}
-        </h3>
-        <p className="text-gray-300 text-sm mb-3 line-clamp-2">
-          {post.excerpt}
-        </p>
-        <div className="flex items-center justify-between text-xs text-gray-400">
-          <span>{formatDate(post.date)}</span>
-          <span>{post.readTime}</span>
-        </div>
-      </Link>
+        </Link>
+        <span className="text-gray-300"> - {post.excerpt}</span>
+      </div>
+      <span className="text-xs text-gray-400 ml-4 flex-shrink-0">
+        {formatDate(post.date)}
+      </span>
     </article>
   );
 }
