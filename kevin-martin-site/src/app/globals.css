@@ -16,7 +16,13 @@ html {
   outline-offset: 2px;
 }
 
-/* Link hover effects */
+/* Global link styling */
 a {
-  transition: color 0.2s ease-in-out;
+  color: #60a5fa; /* blue-400 */
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
 }
