@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/data/blog';
 import BlogPostCard from '@/components/BlogPostCard';
+import SubscriptionForm from '@/components/SubscriptionForm';
 
 export default function BlogPage() {
   const allPosts = getAllPosts();
@@ -20,6 +21,11 @@ export default function BlogPage() {
           <p className="text-gray-300">
             Thoughts on technology, productivity, and building things that matter.
           </p>
+        </div>
+
+        {/* Subscription Form */}
+        <div className="mb-12">
+          <SubscriptionForm />
         </div>
 
         {/* Blog Posts */}
