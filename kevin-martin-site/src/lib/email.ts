@@ -20,8 +20,11 @@ export async function sendEmail({ to, subject, html, from }: EmailOptions) {
   }
 
   try {
+    // Use environment variable for sender email, defaulting to onboarding@resend.dev for testing
+    const defaultFrom = process.env.EMAIL_FROM_ADDRESS || 'Kevin Martin <onboarding@resend.dev>';
+    
     const result = await resend.emails.send({
-      from: from || 'Kevin Martin <kevin@k3vinmartin.com>', // Use resend.dev for testing, replace with your verified domain for production
+      from: from || defaultFrom,
       to,
       subject,
       html,

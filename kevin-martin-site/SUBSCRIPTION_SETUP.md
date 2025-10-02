@@ -71,7 +71,7 @@ CREATE POLICY "Users can read their own subscription" ON subscribers
 ### 2.1 Create Resend Account
 1. Go to [resend.com](https://resend.com)
 2. Create an account
-3. Verify your domain (or use onboarding@resend.dev for testing)
+3. Verify your domain (system defaults to onboarding@resend.dev for testing)
 
 ### 2.2 Get API Key
 1. Go to API Keys section
@@ -97,6 +97,8 @@ SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
 # Resend
 RESEND_API_KEY=your_resend_api_key
+# Optional: Override default sender email (defaults to onboarding@resend.dev for testing)
+EMAIL_FROM_ADDRESS=Kevin Martin <kevin@yourdomain.com>
 
 # Your site URL
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com

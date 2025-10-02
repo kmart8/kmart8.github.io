@@ -20,9 +20,9 @@
 2. Go to **API Keys** and create a new key
 3. Copy the API key (starts with `re_`)
 
-**For testing:** You can use `onboarding@resend.dev` as the sender email
+**For testing:** The system now defaults to `onboarding@resend.dev` which only sends to your sign-up email
 
-**For production:** You need to verify your domain (easy DNS setup)
+**For production:** Set `EMAIL_FROM_ADDRESS` environment variable to your verified domain email
 
 ### 3. Configure Environment Variables (1 min)
 
@@ -41,6 +41,8 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbG...
 RESEND_API_KEY=re_...
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NOTIFICATION_API_SECRET=generate-a-random-string-here
+# Optional: Override default sender email (defaults to onboarding@resend.dev for testing)
+EMAIL_FROM_ADDRESS=Kevin Martin <kevin@yourdomain.com>
 ```
 
 ### 4. Start the Development Server
@@ -61,11 +63,7 @@ Visit `http://localhost:3000/blog` to see the subscription form!
 
 ### Test Email Notification
 
-Update the sender email in `src/lib/email.ts` line 14:
-
-```typescript
-from: from || 'Kevin Martin <onboarding@resend.dev>',
-```
+The system now defaults to using `onboarding@resend.dev` for testing (only sends to your sign-up email).
 
 Send a test notification:
 
@@ -165,7 +163,7 @@ Uncomment the welcome email line in `src/app/api/subscribe/route.ts` and create 
 
 Before going live:
 
-- [ ] Update sender email in `src/lib/email.ts`
+- [ ] Set `EMAIL_FROM_ADDRESS` environment variable to your verified domain email
 - [ ] Verify your domain in Resend
 - [ ] Update `NEXT_PUBLIC_SITE_URL` in `.env.local`
 - [ ] Generate a strong random string for `NOTIFICATION_API_SECRET`
