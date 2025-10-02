@@ -130,15 +130,15 @@ function generateEmailHtml(data: EmailTemplateData): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${data.title}</title>
 </head>
-<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f3f4f6;">
-  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f3f4f6;">
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #0f172a;">
     <tr>
       <td align="center" style="padding: 40px 20px;">
-        <table role="presentation" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <table role="presentation" style="max-width: 600px; width: 100%; background-color: #1e293b; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
           <!-- Header -->
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center;">
-              <h1 style="margin: 0; font-size: 28px; font-weight: bold; color: #111827;">
+              <h1 style="margin: 0; font-size: 28px; font-weight: bold; color: #f8fafc;">
                 New Blog Post
               </h1>
             </td>
@@ -147,15 +147,15 @@ function generateEmailHtml(data: EmailTemplateData): string {
           <!-- Content -->
           <tr>
             <td style="padding: 0 40px 40px;">
-              <h2 style="margin: 0 0 16px; font-size: 22px; font-weight: 600; color: #1f2937;">
+              <h2 style="margin: 0 0 16px; font-size: 22px; font-weight: 600; color: #f1f5f9;">
                 ${data.title}
               </h2>
               
-              <p style="margin: 0 0 8px; font-size: 14px; color: #6b7280;">
+              <p style="margin: 0 0 8px; font-size: 14px; color: #94a3b8;">
                 ${data.date} • ${data.readTime}
               </p>
               
-              <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #4b5563;">
+              <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #cbd5e1;">
                 ${data.excerpt}
               </p>
               
@@ -173,11 +173,11 @@ function generateEmailHtml(data: EmailTemplateData): string {
           
           <!-- Footer -->
           <tr>
-            <td style="padding: 20px 40px; border-top: 1px solid #e5e7eb; text-align: center;">
-              <p style="margin: 0 0 8px; font-size: 14px; color: #6b7280;">
+            <td style="padding: 20px 40px; border-top: 1px solid #334155; text-align: center;">
+              <p style="margin: 0 0 8px; font-size: 14px; color: #94a3b8;">
                 You're receiving this because you subscribed to blog updates.
               </p>
-              <a href="${data.unsubscribeUrl}" style="font-size: 14px; color: #9ca3af; text-decoration: underline;">
+              <a href="${data.unsubscribeUrl}" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
                 Unsubscribe
               </a>
             </td>

@@ -11,10 +11,20 @@ export async function GET(request: Request) {
         `
         <!DOCTYPE html>
         <html>
-          <head><title>Invalid Unsubscribe Link</title></head>
-          <body style="font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px;">
-            <h1>Invalid Link</h1>
-            <p>This unsubscribe link is invalid or has expired.</p>
+          <head>
+            <title>Invalid Unsubscribe Link</title>
+            <style>
+              body { font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+              .container { background: #1e293b; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+              h1 { color: #f8fafc; margin-bottom: 16px; }
+              p { color: #cbd5e1; line-height: 1.6; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Invalid Link</h1>
+              <p>This unsubscribe link is invalid or has expired.</p>
+            </div>
           </body>
         </html>
         `,
@@ -39,10 +49,20 @@ export async function GET(request: Request) {
         `
         <!DOCTYPE html>
         <html>
-          <head><title>Subscriber Not Found</title></head>
-          <body style="font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px;">
-            <h1>Subscriber Not Found</h1>
-            <p>We couldn't find a subscription with this email address.</p>
+          <head>
+            <title>Subscriber Not Found</title>
+            <style>
+              body { font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+              .container { background: #1e293b; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+              h1 { color: #f8fafc; margin-bottom: 16px; }
+              p { color: #cbd5e1; line-height: 1.6; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Subscriber Not Found</h1>
+              <p>We couldn't find a subscription with this email address.</p>
+            </div>
           </body>
         </html>
         `,
@@ -59,10 +79,20 @@ export async function GET(request: Request) {
         `
         <!DOCTYPE html>
         <html>
-          <head><title>Invalid Token</title></head>
-          <body style="font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px;">
-            <h1>Invalid Token</h1>
-            <p>The verification token is invalid.</p>
+          <head>
+            <title>Invalid Token</title>
+            <style>
+              body { font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+              .container { background: #1e293b; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+              h1 { color: #f8fafc; margin-bottom: 16px; }
+              p { color: #cbd5e1; line-height: 1.6; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Invalid Token</h1>
+              <p>The verification token is invalid.</p>
+            </div>
           </body>
         </html>
         `,
@@ -98,17 +128,18 @@ export async function GET(request: Request) {
               max-width: 600px;
               margin: 50px auto;
               padding: 20px;
-              background: #f9fafb;
+              background: #0f172a;
+              color: #f8fafc;
             }
             .container {
-              background: white;
+              background: #1e293b;
               padding: 40px;
               border-radius: 8px;
-              box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+              box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             }
-            h1 { color: #111827; margin-bottom: 16px; }
-            p { color: #6b7280; line-height: 1.6; }
-            a { color: #2563eb; text-decoration: none; }
+            h1 { color: #f8fafc; margin-bottom: 16px; }
+            p { color: #cbd5e1; line-height: 1.6; }
+            a { color: #3b82f6; text-decoration: none; }
             a:hover { text-decoration: underline; }
           </style>
         </head>
@@ -129,14 +160,24 @@ export async function GET(request: Request) {
     console.error('Unsubscribe error:', error);
     return new Response(
       `
-      <!DOCTYPE html>
-      <html>
-        <head><title>Error</title></head>
-        <body style="font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px;">
-          <h1>Error</h1>
-          <p>An error occurred while processing your request. Please try again later.</p>
-        </body>
-      </html>
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body { font-family: system-ui; max-width: 600px; margin: 50px auto; padding: 20px; background: #0f172a; color: #f8fafc; }
+              .container { background: #1e293b; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+              h1 { color: #f8fafc; margin-bottom: 16px; }
+              p { color: #cbd5e1; line-height: 1.6; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1>Error</h1>
+              <p>An error occurred while processing your request. Please try again later.</p>
+            </div>
+          </body>
+        </html>
       `,
         {
           headers: { 'Content-Type': 'text/html; charset=utf-8' },
