@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getServiceSupabase } from '@/lib/supabase';
+import { sendWelcomeEmail } from '@/lib/email';
 import crypto from 'crypto';
 
 export async function POST(request: Request) {
@@ -43,6 +44,14 @@ export async function POST(request: Request) {
 
         if (error) throw error;
 
+        // Send welcome email for resubscription
+        try {
+          await sendWelcomeEmail(email);
+        } catch (emailError) {
+          console.error('Failed to send welcome email:', emailError);
+          // Don't fail the subscription if email fails
+        }
+
         return NextResponse.json({
           message: 'Successfully resubscribed to blog updates!',
         });
@@ -61,8 +70,13 @@ export async function POST(request: Request) {
 
     if (error) throw error;
 
-    // TODO: Send welcome email (optional)
-    // await sendWelcomeEmail(email);
+    // Send welcome email
+    try {
+      await sendWelcomeEmail(email);
+    } catch (emailError) {
+      console.error('Failed to send welcome email:', emailError);
+      // Don't fail the subscription if email fails
+    }
 
     return NextResponse.json({
       message: 'Successfully subscribed to blog updates!',
