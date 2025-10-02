@@ -57,7 +57,7 @@ export async function sendWelcomeEmail(email: string) {
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center;">
               <h1 style="margin: 0; font-size: 28px; font-weight: bold; color: #f8fafc;">
-                Welcome!
+                Welcome
               </h1>
             </td>
           </tr>
@@ -70,19 +70,12 @@ export async function sendWelcomeEmail(email: string) {
               </h2>
               
               <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.6; color: #cbd5e1;">
-                Hi there! Thanks for subscribing to my blog updates. I'm excited to share my thoughts on data science, software engineering, and building impactful solutions.
+                Thanks for subscribing to my blog updates.
               </p>
               
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #cbd5e1;">
-                You'll receive notifications whenever I publish new posts. I typically write about:
+                You'll receive notifications whenever I publish new posts.
               </p>
-              
-              <ul style="margin: 0 0 24px; padding-left: 20px; color: #cbd5e1; font-size: 16px; line-height: 1.6;">
-                <li style="margin-bottom: 8px;">Data science and machine learning insights</li>
-                <li style="margin-bottom: 8px;">Software engineering best practices</li>
-                <li style="margin-bottom: 8px;">Building secure data sharing platforms</li>
-                <li style="margin-bottom: 8px;">Personal projects and learnings</li>
-              </ul>
               
               <table role="presentation" style="margin: 0 auto;">
                 <tr>
@@ -117,7 +110,7 @@ export async function sendWelcomeEmail(email: string) {
 
   return await sendEmail({
     to: email,
-    subject: "Welcome to Kevin Martin's Blog! 🎉",
+    subject: "Welcome to Kevin Martin's Blog",
     html: welcomeEmailHtml,
   });
 }
