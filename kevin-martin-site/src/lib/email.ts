@@ -39,7 +39,7 @@ export function generateUnsubscribeUrl(email: string, token: string): string {
   return `${baseUrl}/api/unsubscribe?email=${encodeURIComponent(email)}&token=${token}`;
 }
 
-export async function sendWelcomeEmail(email: string) {
+export async function sendWelcomeEmail(email: string, verificationToken: string) {
   const welcomeEmailHtml = `
 <!DOCTYPE html>
 <html>
@@ -95,7 +95,7 @@ export async function sendWelcomeEmail(email: string) {
               <p style="margin: 0 0 8px; font-size: 14px; color: #94a3b8;">
                 You can unsubscribe at any time using the link below.
               </p>
-              <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/unsubscribe?email=${encodeURIComponent(email)}&token=unsubscribe" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
+              <a href="${generateUnsubscribeUrl(email, verificationToken)}" style="font-size: 14px; color: #94a3b8; text-decoration: none;">
                 Unsubscribe
               </a>
             </td>

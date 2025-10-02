@@ -46,7 +46,7 @@ export async function POST(request: Request) {
 
         // Send welcome email for resubscription
         try {
-          await sendWelcomeEmail(email);
+          await sendWelcomeEmail(email, existing.verification_token);
         } catch (emailError) {
           console.error('Failed to send welcome email:', emailError);
           // Don't fail the subscription if email fails
@@ -72,7 +72,7 @@ export async function POST(request: Request) {
 
     // Send welcome email
     try {
-      await sendWelcomeEmail(email);
+      await sendWelcomeEmail(email, verificationToken);
     } catch (emailError) {
       console.error('Failed to send welcome email:', emailError);
       // Don't fail the subscription if email fails
