@@ -72,10 +72,6 @@ export async function sendWelcomeEmail(email: string, verificationToken: string)
                 Thanks for subscribing
               </h2>
               
-              <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.6; color: #cbd5e1;">
-                Thanks for subscribing to my blog updates.
-              </p>
-              
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #cbd5e1;">
                 You'll receive notifications whenever I publish new posts.
               </p>
