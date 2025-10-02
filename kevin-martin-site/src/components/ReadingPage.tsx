@@ -13,7 +13,7 @@ export default function ReadingPage({ title, subtitle, years }: ReadingPageProps
       <div className="max-w-3xl mx-auto px-6 py-20">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="text-slate-400 hover:text-slate-200 mb-6 inline-block">
+          <Link href="/" className="text-gray-400 hover:text-white mb-4 inline-block px-3 py-1">
             ← home
           </Link>
           <h1 className="text-3xl font-bold text-white mb-3">{title}</h1>

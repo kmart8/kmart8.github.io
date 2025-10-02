@@ -13,7 +13,7 @@ export default function BlogPage() {
         <div className="mb-12">
           <Link 
             href="/" 
-            className="text-gray-400 hover:text-white text-sm mb-4 inline-block"
+            className="text-gray-400 hover:text-white text-sm mb-4 inline-block px-3 py-1"
           >
             ← home
           </Link>
