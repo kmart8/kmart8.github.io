@@ -18,7 +18,12 @@ npm run dev
 
 ## Email Notifications
 
-To notify subscribers of a new blog post, run the following in the terminal:
+To notify the test user of a new blog post, run the following in the terminal:
 ```bash
 ./scripts/send-notification.sh blog-slug-name
+```
+
+To actually send notifications to subscribers, run the following in the terminal:
+```bash
+./scripts/send-notification.sh blog-slug-name EMAIL_FROM_ADDRESS=Kevin Martin <kevin@k3vinmartin.com>
 ```
